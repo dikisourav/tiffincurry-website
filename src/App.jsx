@@ -8,7 +8,7 @@ return(
 
 <Routes>
 
-<Route path="/" element={<Home/>} />
+<Route path="/tiffincurry-website" element={<Home/>} />
 
 <Route path="/demo" element={<Demo/>} />
 
