@@ -20,7 +20,7 @@ return(
 
 <div className="demo-page">
 
-<Link to="/" className="back">
+<Link to="/tiffincurry-website" className="back">
 ← Back
 </Link>
 
