@@ -1,72 +1,62 @@
 import { useEffect,useState } from "react"
 import { Link } from "react-router-dom"
+import Navbar from "../components/navbar"
+import Footer from "../components/Footer"
+import demo from "../assets/demo.svg"
+import dark_demo from "../assets/dark-demo.svg"
 
 export default function Demo(){
-
-const [cities,setCities] = useState([])
-const [city,setCity] = useState("")
-
-useEffect(()=>{
-
-fetch("http://localhost:4000/api/cities")
-.then(res=>res.json())
-.then(data=>setCities(data))
-
-},[])
-
-const selected = cities.find(c=>c.name===city)
+const [dark,setDark] = useState(false)
 
 return(
 
-<div className="demo-page">
+<div className={dark ? "dark":"light"}>
 
-<Link to="/tiffincurry-website" className="back">
-← Back
-</Link>
+<Navbar  dark={dark} setDark={setDark}/>
 
-<div className="form">
+<section className="demo-page">
 
-<h2>Request a demo</h2>
+      {/* LEFT SIDE - IMAGE */}
+      <div className="demo-left">
+        {dark ? <img src={dark_demo} alt="Demo" /> : <img src={demo} alt="Demo" />}
+      </div>
 
-<input placeholder="Name"/>
+      {/* RIGHT SIDE - FORM */}
+      <div className="demo-right">
 
-<input placeholder="Restaurant Name"/>
+        <h2>Request a Demo</h2>
+        <p>See how TiffinCurry can transform your restaurant operations.</p>
 
-<input placeholder="Email"/>
+        <form className="demo-form">
 
-<input placeholder="Phone"/>
+          <input type="text" placeholder="Your Name" required />
+          <input type="text" placeholder="Restaurant Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Phone Number" required />
+          <input type="text" placeholder="Address" required />
 
-<input placeholder="Restaurant Address"/>
+          <div className="row">
+            <input type="text" placeholder="City" required />
+            <input type="text" placeholder="State" required />
+            <input type="text" placeholder="PIN" required />
+          </div>
 
-<select
-value={city}
-onChange={(e)=>setCity(e.target.value)}
->
+          <button type="submit" className="primary-btn">
+            Request Demo
+          </button>
 
-<option>Select City</option>
+        </form>
 
-{cities.map(c=>(
-<option key={c.id} value={c.name}>
-{c.name}
-</option>
-))}
+        {/* <Link to="/">
+          <button className="secondary-btn">← Back to Home</button>
+        </Link> */}
 
-</select>
+      </div>
 
-<input
-value={selected?.state || ""}
-readOnly
-placeholder="State"
-/>
+    </section>
 
-<button className="primary-btn large">
-Submit Request
-</button>
-
+<Footer />
 </div>
-
-</div>
-
 )
 
 }

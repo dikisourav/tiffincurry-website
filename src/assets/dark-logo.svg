@@ -1,0 +1,17 @@
+<svg width="220" height="60" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Icon Circle -->
+  <circle cx="30" cy="30" r="22" fill="#FF6B35"/>
+
+  <!-- Spoon Shape -->
+  <path d="M30 18 C34 18, 36 22, 36 26 C36 30, 34 34, 30 34 C26 34, 24 30, 24 26 C24 22, 26 18, 30 18Z" fill="white"/>
+
+  <!-- Handle -->
+  <rect x="29" y="34" width="2" height="10" fill="white"/>
+
+  <!-- Text -->
+  <text x="70" y="36" font-size="20" font-family="Arial, sans-serif" fill="#ffffff" font-weight="600">
+    TiffinCurry
+  </text>
+
+</svg>

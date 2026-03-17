@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/logo.svg";
+import dark_logo from "../assets/dark-logo.svg";
 
 export default function Navbar({ dark, setDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,15 +11,18 @@ export default function Navbar({ dark, setDark }) {
       <div className="container nav-inner">
 
         {/* LEFT */}
-        <div className="logo">
-          TiffinCurry
+        <Link to="/tiffincurry-website">        
+        <div className="logo logo-img">
+           {dark ? <img src={dark_logo} alt="TiffinCurry" /> : <img src={logo} alt="TiffinCurry" />}
+           
         </div>
+        </Link>
 
         {/* CENTER MENU */}
         <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
-          <a href="#product" onClick={()=>setMenuOpen(false)}>Pricing</a>
-          <a href="#about" onClick={()=>setMenuOpen(false)}>About Us</a>
-          <a href="#contact" onClick={()=>setMenuOpen(false)}>Contact</a>
+          <Link to="/tiffincurry-website/pricing">Pricing</Link>
+          <Link to="/tiffincurry-website/about">About Us</Link>
+          <Link to="/tiffincurry-website/contact" onClick={()=>setMenuOpen(false)}>Contact</Link>
         </nav>
 
         {/* RIGHT */}
@@ -30,7 +35,7 @@ export default function Navbar({ dark, setDark }) {
             {dark ? "☀️" : "🌙"}
           </button>
 
-          <Link to="/demo">
+          <Link to="/tiffincurry-website/demo">
             <button className="primary-btn">
               Request Demo
             </button>

@@ -54,7 +54,8 @@ return(
     <div className="metrics-container">
 
 <h2 className="metrics-title">
-Why Choose TiffinCurry
+{/* Why Choose <span>TiffinCurry</span> */}
+Why Choose TiffinCurry 
 </h2>
 
 <p className="metrics-subtitle">

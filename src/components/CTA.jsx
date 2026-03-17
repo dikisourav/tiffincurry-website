@@ -14,7 +14,7 @@ Ready to modernize your restaurant?
 
 </h2>
 
-<Link to="/demo">
+<Link to="/tiffincurry-website/demo">
 <button className="primary-btn large">
 Book a Demo
 </button>
