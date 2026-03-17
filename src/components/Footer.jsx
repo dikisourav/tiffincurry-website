@@ -1,4 +1,5 @@
 import "./css/footer.css"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,10 +27,10 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            <li>About Us</li>
-            <li>Contact</li>
-            <li>Pricing</li>
-            <li>Blog</li>
+            <li><Link to="/tiffincurry-website/about">About Us</Link></li>
+            <li><Link to="/tiffincurry-website/demo">Contact Us</Link></li>
+            <li><Link to="/tiffincurry-website/pricing">Pricing</Link></li>
+            <li><Link to="/tiffincurry-website/blog">Blog</Link></li>
           </ul>
         </div>
 
