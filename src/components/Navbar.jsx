@@ -65,10 +65,10 @@ export default function Navbar({ dark, setDark }) {
           </Link>
 
           <Link
-            to="/tiffincurry-website/contact"
+            to="/tiffincurry-website/support"
             onClick={() => setMenuOpen(false)}
           >
-            Contact
+            Support
           </Link>
 
         </nav>

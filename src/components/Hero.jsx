@@ -12,14 +12,30 @@ export default function Hero() {
         </h1>
 
         <p>
-          All-in-one POS system designed to streamline billing,
-          manage orders and run your restaurant smoothly.
+          Fast billing. Works offline. Regional language support. Built for Indian restaurants.
         </p>
 
         <div className="hero-buttons">
-          <Link to="/tiffincurry-website/demo"><button className="primary">Request Demo</button></Link>
-          <button className="secondary">Watch Demo</button>
-        </div>
+
+  <div className="hero-cta">
+
+    <Link to="/tiffincurry-website/demo">
+      <button className="primary">
+        Request Demo
+      </button>
+    </Link>
+
+    <span className="cta-subtext">
+      Free setup consultation included
+    </span>
+
+  </div>
+<div className="hero-cta"><button className="secondary">
+    Watch Demo
+  </button></div>
+  
+
+</div>
       </div>
 
       <div className="hero-image">
