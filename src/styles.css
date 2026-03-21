@@ -600,8 +600,9 @@ text-align:center;
   align-items:center;
   justify-content:space-between;
   gap:60px;
-  padding:80px 8%;
-  min-height:100vh;
+  padding:60px 8%;
+  flex-wrap:wrap;
+  /* min-height:100vh; */
 }
 
 .demo-left,
@@ -642,6 +643,7 @@ text-align:center;
 .row{
   display:flex;
   gap:10px;
+  flex-wrap:wrap;
 }
 
 .primary-btn{
@@ -682,6 +684,45 @@ text-align:center;
   .row{
     flex-direction:column;
   }
+}
+
+@media (max-height: 500px){
+
+.demo-page{
+  align-items:flex-start;
+  padding-top:40px;
+}
+
+.demo-left svg{
+  max-width:380px;
+}
+
+.demo-right h2{
+  font-size:24px;
+}
+
+.demo-form input{
+  padding:8px;
+}
+
+}
+
+/* TAB compatibility */
+@media(max-width:1100px){
+
+.demo-page{
+  flex-direction:column;
+}
+
+.demo-left{
+  order:1;
+}
+
+.demo-right{
+  order:2;
+  width:100%;
+}
+
 }
 
 /* pricing */
