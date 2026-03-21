@@ -440,7 +440,11 @@ box-shadow: 0 12px 30px rgba(0,0,0,.15);
 .metrics{
 
 padding:20px 20px;
-/* background: #F8B7B7 */
+background: #f9f9f9; 
+}
+
+.dark .metrics{
+  background:#1a1d24;
 }
 
 /* content container */
@@ -789,13 +793,22 @@ opacity: 1;
 }
 
 .dark .restaurants{
-  background:#111;
+  background:#1a1d24;
 }
 
 .restaurant-title{
   text-align:center;
-  font-size:36px;
-  margin-bottom:50px;
+  font-size:42px;
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+
+.restaurant-subtitle{
+  text-align: center;
+color:#666;
+margin-bottom:70px;
+font-size:18px;
 }
 
 .restaurant-grid{
@@ -814,11 +827,35 @@ opacity: 1;
   transition:all 0.3s ease;
 }
 
-.restaurant-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+.restaurant-svg {
+
+width:44px;
+
+height:44px;
+stroke:#111;
+stroke-width:1.6;
+transition:.25s ease;
 }
 
+
+.restaurant-card:hover .restaurant-svg {
+
+stroke:#FF6B35;
+transform:translateY(-4px);
+
+}
+
+.dark .restaurant-svg {
+
+stroke:white;
+
+}
+
+.dark .restaurant-card:hover .restaurant-svg {
+
+stroke:#FF6B35;
+
+}
 .restaurant-icon{
   font-size:40px;
   margin-bottom:15px;
@@ -830,7 +867,7 @@ opacity: 1;
 }
 
 .dark .restaurant-grid div{
-background:#1c1f26;
+background:#111;
 }
 
 @media(max-width:900px){
