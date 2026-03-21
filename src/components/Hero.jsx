@@ -1,5 +1,6 @@
 import heroImage from "../assets/hero-bg.png";
 // import "./css/Hero.css";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -16,7 +17,7 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary">Request Demo</button>
+          <Link to="/tiffincurry-website/demo"><button className="primary">Request Demo</button></Link>
           <button className="secondary">Watch Demo</button>
         </div>
       </div>
