@@ -50,7 +50,7 @@ icon:<Headphones size={36}/>
 
 return(
 
-<section className="metrics">
+<section className="metrics reveal reveal-stagger">
     <div className="metrics-container">
 
 <h2 className="metrics-title">

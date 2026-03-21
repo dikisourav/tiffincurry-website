@@ -1,12 +1,14 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import useReveal from "../hooks/useReveal";
 
 export default function About({ dark, setDark }) {
+  useReveal();
   return (
     <>
       <Navbar dark={dark} setDark={setDark} />
 
-      <section className="about-page">
+      <section className="about-page reveal reveal-stagger">
 
         {/* HERO */}
         <div className="about-hero">
@@ -30,7 +32,7 @@ export default function About({ dark, setDark }) {
         </div>
 
         {/* FOUNDERS */}
-        <div className="about-founders container">
+        <div className="about-founders container reveal reveal-stagger">
 
           <h2>Meet the Founders</h2>
 

@@ -2,7 +2,7 @@ export default function Restaurants(){
 
 return(
 
-<section className="restaurants">
+<section className="restaurants reveal reveal-stagger">
 
   <div className="container">
 

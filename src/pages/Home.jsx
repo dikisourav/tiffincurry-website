@@ -7,10 +7,12 @@ import Restaurants from "../components/Restaurants"
 import CTA from "../components/CTA"
 import Footer from "../components/Footer"
 import Features from "../components/Features"
+import useReveal from "../hooks/useReveal";
 
 export default function Home(){
 
 const [dark,setDark] = useState(false)
+useReveal()
 
 return(
 

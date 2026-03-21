@@ -1,14 +1,16 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import useReveal from "../hooks/useReveal";
 
 export default function Pricing() {
   const [dark, setDark] = useState(false);
+  useReveal();
 
   return (
     <div className={dark ? "dark" : "light"}>
       <Navbar dark={dark} setDark={setDark} />
-      <section className="pricing">
+      <section className="pricing reveal reveal-stagger">
         
         <h1 className="pricing-title">Simple, Affordable, Transparent Pricing</h1>
       <p className="pricing-subtitle">

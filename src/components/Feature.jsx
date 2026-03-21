@@ -1,10 +1,10 @@
-export default function Feature({title,text,img,reverse}){
+export default function Feature({ title, text, img, reverse }) {
 
-return(
+return (
 
-<section className="feature">
+<section className="feature reveal">
 
-<div className={`container feature-inner ${reverse ? "reverse":""}`}>
+<div className={`container feature-inner ${reverse ? "reverse" : ""}`}>
 
 <div className="feature-text">
 
@@ -16,7 +16,7 @@ return(
 
 <div className="feature-image">
 
-<img src={img}/>
+<img src={img} alt={title} />
 
 </div>
 
@@ -24,6 +24,6 @@ return(
 
 </section>
 
-)
+);
 
 }

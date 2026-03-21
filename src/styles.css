@@ -593,49 +593,194 @@ margin-bottom:70px;
 font-size:18px;
 }
 
+/* ============================
+FEATURE SECTION BASE
+============================ */
 
-.feature{
-padding:60px 0;
-}
+.feature {
 
-.feature-inner{
-display:flex;
-align-items:center;
-gap:60px;
-/* flex-wrap:wrap; */
-}
-
-.feature-inner.reverse{
-flex-direction:row-reverse;
-}
-
-.feature-image{
-  flex:1;
-}
-
-.feature-image img{
-
-  width:650px;
-  max-width:100%;
-
-/* width:500px; */
-border-radius:14px;
-box-shadow:0 16px 40px rgba(0,0,0,.12);
-}
-
-.feature-text{
-/* max-width:480px; */
-flex:1;
-}
-
-@media(max-width:768px){
-
-.feature{
-  flex-direction:column;
-}
+padding: 80px 8%;
 
 }
 
+
+/* ============================
+FEATURE INNER LAYOUT
+============================ */
+
+.feature-inner {
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 60px;
+
+}
+
+
+/* Reverse layout */
+
+.feature-inner.reverse {
+
+flex-direction: row-reverse;
+
+}
+
+
+/* ============================
+TEXT BLOCK
+============================ */
+
+.feature-text {
+
+flex: 1;
+
+max-width: 520px;
+
+/* initial hidden state */
+
+opacity: 0;
+
+transform: translateX(-60px);
+
+transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
+
+}
+
+
+/* Reverse animation direction */
+
+.feature-inner.reverse .feature-text {
+
+transform: translateX(60px);
+
+}
+
+
+/* ============================
+IMAGE BLOCK
+============================ */
+
+.feature-image {
+
+flex: 1;
+
+display: flex;
+
+justify-content: center;
+
+/* initial hidden state */
+
+opacity: 0;
+
+transform: translateX(60px);
+
+transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
+
+}
+
+
+/* Reverse animation direction */
+
+.feature-inner.reverse .feature-image {
+
+transform: translateX(-60px);
+
+}
+
+
+/* ============================
+IMAGE STYLE
+============================ */
+
+.feature-image img {
+
+width: 100%;
+
+max-width: 520px;
+
+border-radius: 16px;
+
+transform: scale(.92);
+
+transition: transform 1s cubic-bezier(0.22,1,0.36,1);
+
+}
+
+
+/* ============================
+ACTIVE REVEAL STATE
+============================ */
+
+.reveal.active .feature-text {
+
+opacity: 1;
+
+transform: translateX(0);
+
+}
+
+.reveal.active .feature-image {
+
+opacity: 1;
+
+transform: translateX(0);
+
+}
+
+.reveal.active .feature-image img {
+
+transform: scale(1);
+
+}
+
+
+/* ============================
+HOVER MICRO INTERACTION
+============================ */
+
+.feature-image img:hover {
+
+transform: scale(1.03);
+
+}
+
+
+/* ============================
+MOBILE RESPONSIVE
+============================ */
+
+@media(max-width:900px){
+
+.feature-inner {
+
+flex-direction: column;
+
+text-align: center;
+
+}
+
+.feature-inner.reverse {
+
+flex-direction: column;
+
+}
+
+/* Disable slide animation on mobile */
+
+.feature-text,
+.feature-image {
+
+transform: translateX(0);
+
+opacity: 1;
+
+}
+
+}
 /* restaurants */
 
 .restaurants{

@@ -4,7 +4,7 @@ export default function CTA(){
 
 return(
 
-<section className="cta">
+<section className="cta reveal reveal-stagger">
 
 <div className="container">
 

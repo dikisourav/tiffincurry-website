@@ -4,7 +4,7 @@ import pos from "../assets/pos.png";
 import kot from "../assets/kot.png";
 export default function Features(){
 return(
-<section className="features">
+<section className="features reveal reveal-stagger">
     <div className="features-container">
 
     <h2 className="features-title">

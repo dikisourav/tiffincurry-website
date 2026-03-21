@@ -3,7 +3,7 @@ import heroImage from "../assets/hero-bg.png";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero reveal">
 
       <div className="hero-text">
         <h1>
