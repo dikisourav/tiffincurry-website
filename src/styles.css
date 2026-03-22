@@ -323,22 +323,20 @@ transition:.2s ease;
 /* hover effect */
 
 .primary:hover {
-
 transform:translateY(-2px);
-
 box-shadow:0 12px 28px rgba(0,0,0,.18);
-
 }
+
+.secondary:hover {
+transform:translateY(-2px);
+box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
 .hero-buttons{
-
 display:flex;
-
 align-items:flex-start;
-
 gap:18px;
-
 margin-top:24px;
-
 }
 
 /* wrapper keeps subtitle aligned */
@@ -352,7 +350,7 @@ align-items:flex-start;
 /* subtitle below CTA */
 
 .cta-subtext{
-font-size:13px;
+font-size:11px;
 margin-top:6px;
 color:#666;
 }
@@ -816,43 +814,84 @@ text-align:center;
 
 /* demo */
 
+/* =============================
+   DEMO PAGE LAYOUT
+============================= */
+
 .demo-page{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:center;
   gap:60px;
-  padding:60px 8%;
+
+  padding:80px 8%;
+  min-height:80vh;
+
   flex-wrap:wrap;
-  /* min-height:100vh; */
 }
+
+
+/* =============================
+   LEFT + RIGHT COLUMNS
+============================= */
 
 .demo-left,
 .demo-right{
   flex:1;
+  min-width:320px;
 }
 
-.demo-left svg{
+
+/* =============================
+   IMAGE FIX (IMPORTANT)
+============================= */
+
+/* You are using <img>, not <svg> */
+
+.demo-left{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.demo-left img{
   width:100%;
-  max-width:500px;
+  max-width:520px;
+  height:auto;
 }
 
-/* FORM */
+
+/* =============================
+   FORM SIDE
+============================= */
+
+.demo-right{
+  max-width:520px;
+}
+
 
 .demo-right h2{
   font-size:32px;
   margin-bottom:10px;
 }
 
+
 .demo-right p{
   margin-bottom:20px;
   color:#666;
 }
+
+
+/* =============================
+   FORM STRUCTURE
+============================= */
 
 .demo-form{
   display:flex;
   flex-direction:column;
   gap:14px;
 }
+
 
 .demo-form input{
   padding:12px;
@@ -861,60 +900,93 @@ text-align:center;
   font-size:14px;
 }
 
+
+/* CITY / STATE / PIN ROW */
+
 .row{
   display:flex;
   gap:10px;
-  flex-wrap:wrap;
 }
+
+.row input{
+  flex:1;
+}
+
+
+/* =============================
+   BUTTON
+============================= */
 
 .primary-btn{
   background:#FF6B35;
-  color:#fff;
-  padding:12px;
+  color:white;
+
+  padding:14px;
+
   border:none;
-  border-radius:8px;
-  cursor:pointer;
+  border-radius:10px;
+
   font-weight:600;
-}
+  font-size:15px;
 
-.secondary-btn{
-  margin-top:10px;
-  background:none;
-  border:none;
-  color:#555;
   cursor:pointer;
+
+  transition:.25s ease;
 }
 
-/* 📱 MOBILE */
+.primary-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+
+/* =============================
+   TABLET VIEW
+============================= */
+
+@media(max-width:1100px){
+
+.demo-page{
+  flex-direction:column;
+}
+
+.demo-right{
+  width:100%;
+  max-width:520px;
+}
+
+}
+
+
+/* =============================
+   MOBILE VIEW
+============================= */
 
 @media(max-width:768px){
-  .demo-page{
-    flex-direction:column;
-    padding:40px 20px;
-  }
 
-  .demo-left{
-    order:1; /* image first */
-  }
-
-  .demo-right{
-    order:2;
-    width:100%;
-  }
-
-  .row{
-    flex-direction:column;
-  }
+.demo-page{
+  padding:50px 20px;
 }
 
-@media (max-height: 500px){
+.row{
+  flex-direction:column;
+}
+
+}
+
+
+/* =============================
+   SHORT HEIGHT SCREENS
+============================= */
+
+@media(max-height:500px){
 
 .demo-page{
   align-items:flex-start;
   padding-top:40px;
 }
 
-.demo-left svg{
+.demo-left img{
   max-width:380px;
 }
 
@@ -924,24 +996,6 @@ text-align:center;
 
 .demo-form input{
   padding:8px;
-}
-
-}
-
-/* TAB compatibility */
-@media(max-width:1100px){
-
-.demo-page{
-  flex-direction:column;
-}
-
-.demo-left{
-  order:1;
-}
-
-.demo-right{
-  order:2;
-  width:100%;
 }
 
 }

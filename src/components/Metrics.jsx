@@ -2,6 +2,7 @@ import {
   Zap,
   ShieldCheck,
   WifiOff,
+  MonitorSmartphone,
   Globe,
   IndianRupee,
   CreditCard,
@@ -20,6 +21,11 @@ icon:<Zap size={36}/>
 title:"99.9% Uptime",
 text:"Reliable POS system built for uninterrupted service",
 icon:<ShieldCheck size={36}/>
+},
+{
+title:"Multi-Terminal Ready",
+text:"Run billing across multiple counters and devices seamlessly",
+icon:<MonitorSmartphone size={36}/>
 },
 {
 title:"Offline Ready",

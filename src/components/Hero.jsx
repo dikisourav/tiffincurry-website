@@ -26,7 +26,7 @@ export default function Hero() {
     </Link>
 
     <span className="cta-subtext">
-      Free setup consultation included
+      *Free setup consultation included
     </span>
 
   </div>

@@ -47,10 +47,6 @@ return(
 
         </form>
 
-        {/* <Link to="/">
-          <button className="secondary-btn">← Back to Home</button>
-        </Link> */}
-
       </div>
 
     </section>
