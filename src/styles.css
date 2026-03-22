@@ -866,19 +866,33 @@ text-align:center;
 ============================= */
 
 .demo-right{
-  max-width:520px;
+max-width:520px;
+padding:40px;
+border-radius:20px;
+background:white;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+}
+
+.dark .demo-right{
+background:#1a1d24;
+box-shadow:0 20px 60px rgba(0,0,0,.4);
 }
 
 
 .demo-right h2{
-  font-size:32px;
-  margin-bottom:10px;
+font-size:36px;
+font-weight:700;
+letter-spacing:-0.5px;
 }
 
 
 .demo-right p{
   margin-bottom:20px;
   color:#666;
+}
+
+.dark .demo-right p{
+  color:#aaa;
 }
 
 
@@ -898,6 +912,18 @@ text-align:center;
   border-radius:8px;
   border:1px solid #ccc;
   font-size:14px;
+}
+
+.dark .demo-form input{
+  background:#111;
+  border:1px solid #333;
+  color:white;
+}
+
+.demo-form input:focus{
+outline:none;
+border-color:#FF6B35;
+box-shadow:0 0 0 3px rgba(255,107,53,.12);
 }
 
 
@@ -920,17 +946,12 @@ text-align:center;
 .primary-btn{
   background:#FF6B35;
   color:white;
-
   padding:14px;
-
   border:none;
   border-radius:10px;
-
   font-weight:600;
   font-size:15px;
-
   cursor:pointer;
-
   transition:.25s ease;
 }
 

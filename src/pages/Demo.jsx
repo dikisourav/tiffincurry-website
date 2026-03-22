@@ -36,7 +36,7 @@ return(
           <input type="text" placeholder="Address" required />
 
           <div className="row">
-            <input type="text" placeholder="City" required />
+            {/* <input type="text" placeholder="City" required /> */}
             <input type="text" placeholder="State" required />
             <input type="text" placeholder="PIN" required />
           </div>
