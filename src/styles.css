@@ -812,214 +812,255 @@ padding:120px 0;
 text-align:center;
 }
 
-/* demo */
+/* GLOBAL SAFETY */
 
-/* =============================
-   DEMO PAGE LAYOUT
-============================= */
+*{
+box-sizing:border-box;
+}
 
-.demo-page{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:60px;
-
-  padding:80px 8%;
-  min-height:80vh;
-
-  flex-wrap:wrap;
+html, body{
+margin:0;
+padding:0;
+overflow-x:hidden;
 }
 
 
-/* =============================
-   LEFT + RIGHT COLUMNS
-============================= */
+/* SECTION */
 
-.demo-left,
-.demo-right{
-  flex:1;
-  min-width:320px;
+.demo-section{
+
+width:100%;
+
+padding:80px 20px;
+
 }
 
 
-/* =============================
-   IMAGE FIX (IMPORTANT)
-============================= */
+/* MAIN LAYOUT */
 
-/* You are using <img>, not <svg> */
+.demo-container{
 
-.demo-left{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+max-width:1200px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:row;   /* IMPORTANT */
+
+align-items:center;
+
+justify-content:center;
+
+gap:60px;
+
 }
 
-.demo-left img{
-  width:100%;
-  max-width:520px;
-  height:auto;
+
+/* LEFT IMAGE */
+
+.demo-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.demo-image img{
+
+width:100%;
+
+max-width:480px;
+
+height:auto;
+
 }
 
 
-/* =============================
-   FORM SIDE
-============================= */
+/* RIGHT FORM */
 
-.demo-right{
-max-width:520px;
+.demo-form-box{
+
+flex:1;
+
+max-width:500px;
+
 padding:40px;
+
 border-radius:20px;
+
 background:white;
+
 box-shadow:0 20px 60px rgba(0,0,0,.08);
+
 }
 
-.dark .demo-right{
+
+/* DARK MODE */
+
+.dark .demo-form-box{
+
 background:#1a1d24;
-box-shadow:0 20px 60px rgba(0,0,0,.4);
+
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+
 }
 
 
-.demo-right h2{
-font-size:36px;
-font-weight:700;
-letter-spacing:-0.5px;
+/* TEXT */
+
+.demo-form-box h2{
+
+font-size:34px;
+
+margin-bottom:10px;
+
+}
+
+.demo-form-box p{
+
+color:#666;
+
+margin-bottom:20px;
+
+}
+
+.dark .demo-form-box p{
+
+color:#aaa;
+
 }
 
 
-.demo-right p{
-  margin-bottom:20px;
-  color:#666;
-}
-
-.dark .demo-right p{
-  color:#aaa;
-}
-
-
-/* =============================
-   FORM STRUCTURE
-============================= */
+/* FORM */
 
 .demo-form{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
 }
 
 
 .demo-form input{
-  padding:12px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font-size:14px;
+
+width:100%;
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+font-size:14px;
+
 }
+
 
 .dark .demo-form input{
-  background:#111;
-  border:1px solid #333;
-  color:white;
-}
 
-.demo-form input:focus{
-outline:none;
-border-color:#FF6B35;
-box-shadow:0 0 0 3px rgba(255,107,53,.12);
-}
+background:#111;
 
+border:1px solid #333;
 
-/* CITY / STATE / PIN ROW */
+color:white;
 
-.row{
-  display:flex;
-  gap:10px;
-}
-
-.row input{
-  flex:1;
 }
 
 
-/* =============================
-   BUTTON
-============================= */
+/* ROW */
+
+.form-row{
+
+display:flex;
+
+gap:10px;
+
+}
+
+.form-row input{
+
+flex:1;
+
+}
+
+
+/* BUTTON */
 
 .primary-btn{
-  background:#FF6B35;
-  color:white;
-  padding:14px;
-  border:none;
-  border-radius:10px;
-  font-weight:600;
-  font-size:15px;
-  cursor:pointer;
-  transition:.25s ease;
-}
 
-.primary-btn:hover{
-  transform:translateY(-1px);
-  box-shadow:0 8px 18px rgba(0,0,0,.12);
-}
+background:#FF6B35;
 
+color:white;
 
-/* =============================
-   TABLET VIEW
-============================= */
+padding:14px;
 
-@media(max-width:1100px){
+border:none;
 
-.demo-page{
-  flex-direction:column;
-}
+border-radius:10px;
 
-.demo-right{
-  width:100%;
-  max-width:520px;
-}
+font-weight:600;
+
+font-size:15px;
+
+cursor:pointer;
 
 }
 
 
-/* =============================
-   MOBILE VIEW
-============================= */
+/* TABLET */
 
-@media(max-width:768px){
+@media(max-width:1024px){
 
-.demo-page{
-  padding:50px 20px;
-}
+.demo-container{
 
-.row{
-  flex-direction:column;
+flex-direction:column;
+
+text-align:center;
+
 }
 
 }
 
 
-/* =============================
-   SHORT HEIGHT SCREENS
-============================= */
+/* MOBILE */
 
-@media(max-height:500px){
+@media(max-width:575px){
 
-.demo-page{
-  align-items:flex-start;
-  padding-top:40px;
-}
+.demo-section{
 
-.demo-left img{
-  max-width:380px;
-}
-
-.demo-right h2{
-  font-size:24px;
-}
-
-.demo-form input{
-  padding:8px;
-}
+padding:50px 15px;
 
 }
+
+.demo-form-box{
+
+padding:22px;
+
+}
+
+.form-row{
+
+flex-direction:column;
+
+}
+
+.demo-image img{
+
+max-width:320px;
+
+}
+
+}
+
 
 /* pricing */
 .pricing{
