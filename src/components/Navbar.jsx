@@ -47,7 +47,7 @@ Solutions
 <div className="products-wrapper">
 <div className="nav-item product-trigger">
 
-Types of Restaurants
+Restaurants
 <span className="arrow">▾</span>
 
 </div>

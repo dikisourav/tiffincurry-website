@@ -253,3 +253,121 @@ strokeLinejoin="round">
 <path d="M20 20h-6"/>
 <circle cx="20" cy="20" r="1.5" fill="#FF6B35"/>
 </svg>)
+
+//Integrations
+export const paymentGatewayIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="3" y="6" width="18" height="12" rx="2"/>
+<line x1="3" y1="10" x2="21" y2="10"/>
+<circle cx="18" cy="14" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const onlineOrderingIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="4" y="4" width="16" height="12" rx="2"/>
+<line x1="8" y1="20" x2="16" y2="20"/>
+<circle cx="18" cy="6" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const accountingIntegrationIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="5" y="3" width="14" height="18" rx="2"/>
+<line x1="8" y1="8" x2="16" y2="8"/>
+<line x1="8" y1="12" x2="16" y2="12"/>
+<circle cx="17" cy="17" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const deliveryAggregatorIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<path d="M3 12h10"/>
+<path d="M13 8l6 4-6 4"/>
+<circle cx="20" cy="12" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const hardwareIntegrationIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="6" y="2" width="12" height="16" rx="2"/>
+<line x1="9" y1="20" x2="15" y2="20"/>
+<circle cx="18" cy="6" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+//Outlet Management
+export const centralMenuIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<circle cx="12" cy="12" r="3"/>
+<line x1="12" y1="5" x2="12" y2="3"/>
+<line x1="12" y1="21" x2="12" y2="19"/>
+<line x1="5" y1="12" x2="3" y2="12"/>
+<line x1="21" y1="12" x2="19" y2="12"/>
+<circle cx="12" cy="3" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const centralReportIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="3" y="6" width="18" height="12" rx="2"/>
+<line x1="8" y1="14" x2="8" y2="10"/>
+<line x1="12" y1="14" x2="12" y2="8"/>
+<line x1="16" y1="14" x2="16" y2="12"/>
+<circle cx="16" cy="6" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const rbacIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<path d="M12 3l7 3v6c0 5-3 7-7 9-4-2-7-4-7-9V6l7-3z"/>
+<circle cx="12" cy="11" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const branchPerfIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<rect x="4" y="12" width="4" height="6"/>
+<rect x="10" y="8" width="4" height="10"/>
+<rect x="16" y="5" width="4" height="13"/>
+<circle cx="18" cy="3" r="1.5" fill="#FF6B35"/>
+</svg>)
+
+export const remoteOutletMonitorIcon=(<svg width="20" height="20" viewBox="0 0 24 24"
+fill="none"
+stroke="#111"
+strokeWidth="2"
+strokeLinecap="round"
+strokeLinejoin="round">
+<path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12z"/>
+<circle cx="12" cy="12" r="2"/>
+<circle cx="18" cy="6" r="1.5" fill="#FF6B35"/>
+</svg>)

@@ -30,6 +30,21 @@ whatsappIcon,
 customerCampaignsIcon,
 feedbackIcon,
 repeatCustomerIcon,
+
+//Integrations
+paymentGatewayIcon,
+onlineOrderingIcon,
+accountingIntegrationIcon,
+//whatsappIcon, //Already imported above
+deliveryAggregatorIcon,
+hardwareIntegrationIcon,
+
+//Mulit-Outlet
+centralMenuIcon,
+centralReportIcon,
+rbacIcon,
+branchPerfIcon,
+remoteOutletMonitorIcon,
 } from "./nav-icons.jsx"
 
 export const solutionsMenuData = {
@@ -232,34 +247,34 @@ desc:"Takes care of all your agreegator and hardware integrations seamlessly."
 items:[
 {
 title:"Payment Gateways",
-desc:"Integrate with popular payment gateways for secure and convenient transactions.",
-icon:invIcon
+desc:"Integrate with popular payment gateways",
+icon:paymentGatewayIcon
 },
 {
 title:"Online Ordering Platforms",
-desc:"Enhace digital footprint and reach more customers by direct online ordering.",
-icon:invIcon
+desc:"Direct online ordering.",
+icon:onlineOrderingIcon
 },
 
 {
 title:"Accounting Integrations",
-desc:"Integrate with accounting software to streamline financial management and reporting.",
-icon:kotIcon
+desc:"Integrate with accounting software",
+icon:accountingIntegrationIcon
 },
 {
 title:"WhatsApp Integration",
-desc:"Get orders via WhatsApp for better customer service.",
-icon:hrmIcon
+desc:"Get orders via WhatsApp",
+icon:whatsappIcon
 },
 {
 title:"Delivery Aggregators",
-desc:"Integrate with delivery platforms like Swiggy / Zomato to expand your reach and boost sales.",
-icon:expIcon
+desc:"Integrate with delivery platforms like Swiggy / Zomato",
+icon:deliveryAggregatorIcon
 },
 {
 title:"Hardware Integrations",
-desc:"Integrate with printers, cash drawers, and other hardware for a complete POS solution.",
-icon:billingDashboardIcon
+desc:"Integrate with printers, etc.",
+icon:hardwareIntegrationIcon
 },
 
 ]
@@ -280,28 +295,28 @@ items:[
 {
 title:"Centralized Menu Control",
 desc:"Manage menus across all outlets from a single dashboard.",
-icon:invIcon
+icon:centralMenuIcon
 },
 
 {
 title:"Centralized Reporting",
 desc:"Get consolidated reports across all outlets for better decision making.",
-icon:kotIcon
+icon:centralReportIcon
 },
 {
 title:"Role-based Access Control",
 desc:"Control user access and permissions across all outlets.",
-icon:hrmIcon
+icon:rbacIcon
 },
 {
 title:"Branch Performance Tracking",
 desc:"Analyze performance metrics for each outlet to identify areas for improvement.",
-icon:expIcon
+icon:branchPerfIcon
 },
 {
 title:"Remote Outlet Monitoring",
 desc:"Monitor outlet performance remotely and receive real-time alerts.",
-icon:billingDashboardIcon
+icon:remoteOutletMonitorIcon
 },
 
 ]
@@ -312,30 +327,38 @@ icon:billingDashboardIcon
 
 export const RestaurantMenuData =  {
 
-"Dine-in":{
+"Full-Service":{
 
 type:"grouped-list",
 
 groups:[
 
 {
-header:"Dine-in",
+header:"Premium Dining",
 
 links:[
 {title:"Fine Dine",url:"/solutions/finedine"},
-{title:"Quick Service",url:"/solutions/qsr"},
+{title:"Casual Dining",url:"/solutions/casual_dining"},
 {title:"Cafe",url:"/solutions/cafe"},
-{title:"Bar",url:"/solutions/bar"}
+{title:"Bar & Lounge",url:"/solutions/bar"}
 ]
 },
-
 {
-header:"Chain Restaurants",
+header:"Quick-Service Formats",
+
+links:[
+{title:"Quick Service Restaurant",url:"/solutions/quick_service"},
+{title:"Fast Casual",url:"/solutions/fast_casual"},
+]
+},
+{
+header:"Restaurant Chains",
 
 links:[
 {title:"Cafe Chains",url:"/solutions/cafe_chains"},
-{title:"Speciality Chains",url:"/solutions/speciality_chains"},
-{title:"Confectionery Chains",url:"/solutions/confectionery_chains"},
+{title:"QSR Chains",url:"/solutions/qsr_chains"},
+{title:"Speciality Restaurant Chains",url:"/solutions/speciality_chains"},
+{title:"Dessert Chains",url:"/solutions/confectionery_chains"},
 ]
 }
 
@@ -348,17 +371,20 @@ type:"grouped-list",
 groups:[
 
 {
-header:"Quick Service",
+header:"Street & Express Formats",
 
 links:[
 {title:"Pizzeria",url:"/solutions/finedine"},
 {title:"Roll Corner",url:"/solutions/qsr"},
 {title:"Momo Shop",url:"/solutions/cafe"},
 {title:"Kebab Shop",url:"/solutions/kebab_shop"},
+{title:"Burger Joint",url:"/solutions/burger_joint"},
+{title:"Sandwich Shop",url:"/solutions/sandwich_shop"},
+{title:"Bhaji & Chaat Shops",url:"/solutions/bhaji_chaat"},
 ]
 },
 {
-header:"Confectionery",
+header:"Bakery & Dessert",
 
 links:[
 {title:"Bakery",url:"/solutions/bakery"},
@@ -366,24 +392,38 @@ links:[
 {title:"Chocolate Shop",url:"/solutions/chocolate_shop"},
 {title:"Ice Cream Parlor",url:"/solutions/icecream_parlor"},
 {title:"Sweet Shop",url:"/solutions/sweet_shop"},
+{title:"Dessert Studios",url:"/solutions/dessert_studios"},
 ]
 },
 
 {
-header:"Delivery",
+header:"Delivery-First Kitchens",
 
 links:[
 {title:"Cloud Kitchen",url:"/solutions/cloud"},
 {title:"Food Truck",url:"/solutions/food_truck"},
+{title:"Virtual Brand Kitchens",url:"/solutions/virtual_brand"},
 ]
 },
 {
-header:"Drinks",
+header:"Beverage Outlets",
 
 links:[
-{title:"FL Offshop",url:"/solutions/fl_offshop"},
+{title:"Liquor Retail Outlet",url:"/solutions/fl_offshop"},
 {title:"Milk Bars",url:"/solutions/milk_bars"},
-{title:"Juice Bars",url:"/solutions/juice_bars"},
+{title:"Juice & Smoothie Bars",url:"/solutions/juice_bars"},
+{title:"Tea Stall",url:"/solutions/tea_stall"},
+{title:"Coffee Kiosks",url:"/solutions/coffee_kiosk"},
+]
+},
+{
+header:"Multi-Outlet Businesses",
+
+links:[
+{title:"Central Kitchen",url:"/solutions/central_kitchen"},
+{title:"Bakery Chains",url:"/solutions/bakery_chains"},
+{title:"Dessert Chains",url:"/solutions/dessert_chains"},
+
 ]
 }
 

@@ -810,6 +810,12 @@ flex:1.5;
 
 /* MOBILE */
 
+@media (max-height: 800px){
+  .hero{
+    min-height: auto;
+  }
+}
+
 @media (max-width: 900px){
 
 .hero{
