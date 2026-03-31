@@ -665,7 +665,11 @@ background:#111;
   padding-top: 150px; /* extra top padding to account for fixed navbar */
   gap:40px;
 
-  min-height:100svh;
+  /* min-height:100svh; */
+  min-height:auto;
+  padding-top:150px;
+  padding-bottom:60px;
+
   max-width: 1200px;  /* new */
   margin: 0 auto;      /* center it horizontally */
 }
