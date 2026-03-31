@@ -1,6 +1,6 @@
 import { useState } from "react"
 import MegaMenu from "./MegaMenu"
-import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.js"
+import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.jsx"
 import { Link } from "react-router-dom" 
 import logo from "../assets/logo.svg"
 

@@ -11,7 +11,7 @@ Designed for every type of restaurant
 </h2>
 
 <p className="restaurant-subtitle">
-Whether you run a cafe, QSR, dine-in restaurant, or cloud kitchen —
+Whether you run a dine-in, takeaway or cloud kitchen —
 TiffinCurry adapts to your workflow.
 </p>
 
