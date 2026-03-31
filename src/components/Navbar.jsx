@@ -1,123 +1,202 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
-import dark_logo from "../assets/dark-logo.svg";
+import { useState } from "react"
+import MegaMenu from "./MegaMenu"
+import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.js"
+import { Link } from "react-router-dom" 
+import logo from "../assets/logo.svg"
 
 export default function Navbar({ dark, setDark }) {
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  // Shadow appears after scroll
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () =>
-      window.removeEventListener("scroll", handleScroll);
-
-  }, []);
+const [menuOpen,setMenuOpen]=useState(false)
+// const [megaOpen,setMegaOpen]=useState(false)
 
 
-  return (
+return (
 
-    <header className={`navbar ${scrolled ? "navbar-shadow" : ""}`}>
+<header className="navbar">
 
-      <div className="container nav-inner">
+<div className="nav-wrapper">
 
-        {/* LOGO */}
+{/* LEFT */}
 
-        <Link to="/tiffincurry-website">
+<div className="nav-left">
 
-          <div className="logo logo-img">
+<div className="logo">
+<Link to="/tiffincurry-website" className="logo logo-img">
+    <img src={logo} alt="TiffinCurry" />
+</Link>
+</div>
 
-            {dark
-              ? <img src={dark_logo} alt="TiffinCurry logo" />
-              : <img src={logo} alt="TiffinCurry logo" />
-            }
-
-          </div>
-
-        </Link>
+</div>
 
 
-        {/* CENTER MENU */}
+{/* CENTER */}
 
-        <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+<div className="nav-center">
 
-          <Link
-            to="/tiffincurry-website/pricing"
-            onClick={() => setMenuOpen(false)}
-          >
-            Pricing
-          </Link>
+<div className="products-wrapper">
+<div className="nav-item product-trigger">
 
-          <Link
-            to="/tiffincurry-website/about"
-            onClick={() => setMenuOpen(false)}
-          >
-            About Us
-          </Link>
+Solutions
+<span className="arrow">▾</span>
 
-          <Link
-            to="/tiffincurry-website/support"
-            onClick={() => setMenuOpen(false)}
-          >
-            Support
-          </Link>
-
-        </nav>
+</div>
+<MegaMenu menuData={solutionsMenuData} />
+</div>
 
 
-        {/* RIGHT SIDE */}
+<div className="products-wrapper">
+<div className="nav-item product-trigger">
 
-        <div className="nav-right">
+Types of Restaurants
+<span className="arrow">▾</span>
 
-          {/* DARK MODE TOGGLE */}
-
-          <button
-            className="mode"
-            onClick={() => setDark(!dark)}
-          >
-            {dark ? "☀️" : "🌙"}
-          </button>
+</div>
+<MegaMenu menuData={RestaurantMenuData} />
+</div>
 
 
-          {/* CTA */}
-
-          <Link to="/tiffincurry-website/demo">
-
-            <button className="primary-btn">
-              Request Demo
-            </button>
-
-          </Link>
+<div className="nav-item">
+<Link to="/tiffincurry-website/pricing" className="nav-item">Pricing</Link>
+</div>
+<div className="nav-item">
+<Link to="/tiffincurry-website/about" className="nav-item">About Us</Link>
+</div>
+</div>
 
 
-          {/* HAMBURGER */}
+{/* RIGHT */}
 
-          <div
-            className={`hamburger ${menuOpen ? "open" : ""}`}
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
+<div className="nav-right">
 
-            <span></span>
-            <span></span>
-            <span></span>
+<div className="nav-item">
+Sign in
+</div>
 
-          </div>
 
-        </div>
+<div className="primary-btn">
+Request Demo
+</div>
 
-      </div>
 
-    </header>
+<button
+className="dark-toggle"
+onClick={()=>setDark(!dark)}
+>
 
-  );
+{dark ? "☀️":"🌙"}
+
+</button>
+
+
+<div
+className="hamburger"
+onClick={()=>setMenuOpen(!menuOpen)}
+>
+
+☰
+
+</div>
+
+</div>
+
+</div>
+
+{/* MOBILE MENU */}
+
+{menuOpen && (
+
+<div className="mobile-menu">
+
+{/* SOLUTIONS */}
+
+<details className="mobile-section">
+
+<summary>Solutions</summary>
+
+{Object.entries(solutionsMenuData).map(([sectionName,section]) => (
+
+<div key={sectionName} className="mobile-subsection">
+
+<div className="mobile-subtitle">
+{section.header?.title || sectionName}
+</div>
+
+{section.items?.map(item => (
+
+<a key={item.title} href="#" className="mobile-link">
+{item.title}
+</a>
+
+))}
+
+</div>
+
+))}
+
+</details>
+
+
+{/* TYPES OF RESTAURANTS */}
+
+<details className="mobile-section">
+
+<summary>Types of Restaurants</summary>
+
+{Object.entries(RestaurantMenuData).map(([sectionName,section]) => (
+
+<div key={sectionName} className="mobile-subsection">
+
+<div className="mobile-subtitle">
+
+{sectionName}
+
+</div>
+
+{section.groups?.map(group => (
+
+<div key={group.header}>
+
+<div className="mobile-group-title">
+{group.header}
+</div>
+
+{group.links.map(link => (
+
+<a key={link.title} href={link.url} className="mobile-link">
+{link.title}
+</a>
+
+))}
+
+</div>
+
+))}
+
+</div>
+
+))}
+
+</details>
+
+
+<a href="/pricing" className="mobile-link-main">
+Pricing
+</a>
+
+<a href="/login" className="mobile-link-main">
+Sign in
+</a>
+
+<div className="primary-btn mobile-btn">
+Request Demo
+</div>
+
+</div>
+
+)}
+
+</header>
+
+)
 
 }

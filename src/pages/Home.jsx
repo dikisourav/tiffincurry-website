@@ -20,13 +20,13 @@ return(
 
 <Navbar dark={dark} setDark={setDark}/>
 
-<Hero/>
+<Hero dark={dark}/>
 
-<Metrics/>
+<Restaurants/>
 
 <Features/>
 
-<Restaurants/>
+<Metrics/>
 
 <CTA/>
 <Footer/>

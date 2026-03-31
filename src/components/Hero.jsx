@@ -1,14 +1,16 @@
 import heroImage from "../assets/hero-bg.png";
+import darkHeroImage from "../assets/hero-bg-dark.png";
+
 // import "./css/Hero.css";
 import { Link } from "react-router-dom";
 
-export default function Hero() {
+export default function Hero({ dark }) {
   return (
     <section className="hero reveal">
 
       <div className="hero-text">
         <h1>
-          Supercharge Your Restaurant with <span>TiffinCurry</span>
+          Supercharge Your Restaurant with <span className="highlight-ribbon">TiffinCurry</span>
         </h1>
 
         <p>
@@ -39,9 +41,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-image">
-        <img src={heroImage} alt="Restaurant POS" />
-        
-        {/* <img src="https://images.unsplash.com/photo-1556745757-8d76bdb6984b"/> */}
+        {dark ? <img src={darkHeroImage} alt="Restaurant POS" /> : <img src={heroImage} alt="Restaurant POS" />}
 
       </div>
 

@@ -1,12 +1,3 @@
-import {
-IconToolsKitchen2,
-IconBurger,
-IconCoffee,
-IconGlassCocktail,
-IconTruckDelivery,
-IconCloud
-} from "@tabler/icons-react";
-
 export default function Restaurants(){
 
 return(
@@ -18,6 +9,7 @@ return(
 <h2 className="restaurant-title">
 Designed for every type of restaurant
 </h2>
+
 <p className="restaurant-subtitle">
 Whether you run a cafe, QSR, dine-in restaurant, or cloud kitchen —
 TiffinCurry adapts to your workflow.
@@ -25,33 +17,27 @@ TiffinCurry adapts to your workflow.
 
 <div className="restaurant-grid">
 
-<div className="restaurant-card">
-<IconToolsKitchen2 className="restaurant-svg"/>
+<div className="restaurant-card fine">
 <h3>Fine Dining</h3>
 </div>
 
-<div className="restaurant-card">
-<IconBurger className="restaurant-svg"/>
+<div className="restaurant-card qsr">
 <h3>Quick Service</h3>
 </div>
 
-<div className="restaurant-card">
-<IconCoffee className="restaurant-svg"/>
+<div className="restaurant-card cafe">
 <h3>Cafe</h3>
 </div>
 
-<div className="restaurant-card">
-<IconGlassCocktail className="restaurant-svg"/>
+<div className="restaurant-card bar">
 <h3>Bar</h3>
 </div>
 
-<div className="restaurant-card">
-<IconTruckDelivery className="restaurant-svg"/>
+<div className="restaurant-card truck">
 <h3>Food Truck</h3>
 </div>
 
-<div className="restaurant-card">
-<IconCloud className="restaurant-svg"/>
+<div className="restaurant-card cloud">
 <h3>Cloud Kitchen</h3>
 </div>
 

@@ -1,7 +1,7 @@
 import Feature from "./Feature";
 import hrm from "../assets/hrm.png";
-import pos from "../assets/pos.png";
-import kot from "../assets/kot.png";
+import pos from "../assets/lightning-fast-billing.png";
+import kot from "../assets/kot_screen.png";
 export default function Features(){
 return(
 <section className="features reveal reveal-stagger">
