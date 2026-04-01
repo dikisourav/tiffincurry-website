@@ -3,12 +3,15 @@ import MegaMenu from "./MegaMenu"
 import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.jsx"
 import { Link } from "react-router-dom" 
 import logo from "../assets/logo.svg"
+import signin from "../assets/signin.svg"
+import LoginModal from "./LoginModal"
 
 export default function Navbar({ dark, setDark }) {
 
 const [menuOpen,setMenuOpen]=useState(false)
 // const [megaOpen,setMegaOpen]=useState(false)
 
+const [signinOpen, setSigninOpen] = useState(false);
 
 return (
 
@@ -69,7 +72,8 @@ Restaurants
 <div className="nav-right">
 
 <div className="nav-item">
-Sign in
+    <img src={signin} alt="Sign In" className="signin-icon" onClick={() => setSigninOpen(true)}
+style={{ cursor: "pointer" }} />
 </div>
 
 
@@ -140,7 +144,7 @@ onClick={()=>setMenuOpen(!menuOpen)}
 
 <details className="mobile-section">
 
-<summary>Types of Restaurants</summary>
+<summary>Restaurants</summary>
 
 {Object.entries(RestaurantMenuData).map(([sectionName,section]) => (
 
@@ -183,17 +187,27 @@ onClick={()=>setMenuOpen(!menuOpen)}
 Pricing
 </a>
 
-<a href="/login" className="mobile-link-main">
+<div className="mobile-link-main" onClick={() => setSigninOpen(true)}
+style={{ cursor: "pointer" }}>
 Sign in
-</a>
+</div>
 
 <div className="primary-btn mobile-btn">
 Request Demo
 </div>
-
+<LoginModal
+open={signinOpen}
+setOpen={setSigninOpen}
+/>
 </div>
 
 )}
+
+
+<LoginModal
+open={signinOpen}
+setOpen={setSigninOpen}
+/>
 
 </header>
 

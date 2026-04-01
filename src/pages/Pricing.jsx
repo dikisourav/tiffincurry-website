@@ -21,8 +21,8 @@ export default function Pricing() {
 
         {/* BASIC */}
         <div className="pricing-card">
-          <h3>Basic</h3>
-          <h2>₹5,000<span>/year</span></h2>
+          <h3>TiffinCurry 2D</h3>
+          <h2>₹3,000<span>/3 years</span></h2>
 
           <ul>
             <li>✔ POS Billing</li>
@@ -36,44 +36,60 @@ export default function Pricing() {
             <li>✔ Basic Inventory</li>
             <li>✔ User Management</li>
             <li>✔ Simple UI</li>
+            <li>✔ Printer Integration</li>
             <li>✔ Quick Setup</li>
+            <li>✔ Multi Language</li>
           </ul>
 
           <button className="price-btn">Get Started</button>
         </div>
 
-        {/* PLUS */}
         <div className="pricing-card popular">
           <div className="badge">Most Popular</div>
-
-          <h3>Plus</h3>
-          <h2>₹6,000<span>/year</span></h2>
+          <h3>TiffinCurry 3D</h3>
+          <h2>₹5,000<span>/year</span></h2>
 
           <ul>
-            <li>✔ Everything in Basic</li>
-            <li>✔ Advanced Reports</li>
-            <li>✔ Multi Terminal</li>
+            <li>✔ Everything in 2D</li>
             <li>✔ Inventory Tracking</li>
-            <li>✔ Kitchen Display</li>
-            <li>✔ Role Management</li>
             <li>✔ Discount System</li>
             <li>✔ Online Order Sync</li>
-            <li>✔ Printer Integration</li>
             <li>✔ Daily Analytics</li>
             <li>✔ Priority Support</li>
-            <li>✔ Faster Performance</li>
+            <li>✔ Customer Management</li>
+            <li>✔ HRM</li>
+            <li>✔ Table Management</li>
+            <li>✔ Mobile App</li>
+            
           </ul>
 
           <button className="price-btn primary">Get Started</button>
         </div>
 
+        {/* PLUS */}
+        <div className="pricing-card">
+          <h3>TiffinCurry 4D</h3>
+          <h2>₹6,000<span>/year</span></h2>
+
+          <ul>
+            <li>✔ Everything in 3D</li>
+            <li>✔ Advanced Reports</li>
+            <li>✔ Multi Terminal</li>
+            <li>✔ Kitchen Display</li>
+            <li>✔ Role Management</li>
+            <li>✔ Faster Performance</li>
+          </ul>
+
+          <button className="price-btn">Get Started</button>
+        </div>
+
         {/* PRO */}
         <div className="pricing-card">
-          <h3>Pro</h3>
+          <h3>TiffinCurry 5D</h3>
           <h2>₹12,000<span>/year</span></h2>
 
           <ul>
-            <li>✔ Everything in Plus</li>
+            <li>✔ Everything in 4D</li>
             <li>✔ Cloud Sync</li>
             <li>✔ Multi Outlet Support</li>
             <li>✔ Advanced Inventory</li>
