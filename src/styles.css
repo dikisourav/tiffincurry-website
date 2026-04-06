@@ -33,7 +33,7 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-background:rgb(243, 244, 246);
+background:#F3F4F699; /* semi-transparent with backdrop blur */
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 border-bottom:1px solid #eee;
@@ -76,15 +76,21 @@ font-size:22px;
 font-weight:700;
 cursor:pointer;
 text-decoration: none;
-}
 
+display: flex;
+align-items: center;
+}
 
 .dark .logo{
 color:white;
 }
 
 .logo-img img {
-width: 200px;
+height: 40px; 
+width: auto;
+max-height: 100%;
+display: block;
+object-fit: contain;
 }
 
 
@@ -657,19 +663,19 @@ background:#111;
 
 .hero{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   flex-wrap:wrap;
   justify-content:center;
 
   /* padding:60px 8%; */
   padding: 40px;
   padding-top: 150px; /* extra top padding to account for fixed navbar */
+  padding-bottom:60px;
   gap:40px;
 
   /* min-height:100svh; */
   min-height:auto;
-  padding-top:150px;
-  padding-bottom:60px;
+  
 
   max-width: 1200px;  /* new */
   margin: 0 auto;      /* center it horizontally */
@@ -806,12 +812,18 @@ color:#aaa;
 /* IMAGE */
 
 .hero-image{
-flex:1;
+  order:1;
+  flex:1;
+  height: 100%;
 }
 
 .hero-image img{
   /* width:760px; */
-    width:clamp(420px, 55vw, 760px);
+    max-height: 520px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    /* width:clamp(420px, 55vw, 760px); */
 
   max-width:100%;
   
@@ -1330,6 +1342,7 @@ padding:25px;
 color:white;
 font-size:22px;
 font-weight:600;
+text-decoration: none;
 
 background-size:cover;
 background-position:center;
@@ -1351,6 +1364,7 @@ rgba(0,0,0,.65)
 position:relative;
 z-index:2;
 }
+
 
 .restaurant-card:hover{
 transform:translateY(-6px) scale(1.02);

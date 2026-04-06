@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function Restaurants(){
 
 return(
@@ -17,29 +18,31 @@ TiffinCurry adapts to your workflow.
 
 <div className="restaurant-grid">
 
-<div className="restaurant-card fine">
+<Link to="/fine-dining" className="restaurant-card fine">
 <h3>Fine Dining</h3>
-</div>
+</Link>
 
-<div className="restaurant-card qsr">
+
+<Link to="/quick-service" className="restaurant-card qsr">
 <h3>Quick Service</h3>
-</div>
+</Link>
 
-<div className="restaurant-card cafe">
+<Link to="/cafe" className="restaurant-card cafe">
 <h3>Cafe</h3>
-</div>
+</Link>
 
-<div className="restaurant-card bar">
+<Link to="/bar" className="restaurant-card bar">
 <h3>Bar</h3>
-</div>
+</Link>
 
-<div className="restaurant-card truck">
+<Link to="/food-truck" className="restaurant-card truck">
 <h3>Food Truck</h3>
-</div>
+</Link>
 
-<div className="restaurant-card cloud">
+
+<Link to="/cloud-kitchen" className="restaurant-card cloud">
 <h3>Cloud Kitchen</h3>
-</div>
+</Link>
 
 </div>
 

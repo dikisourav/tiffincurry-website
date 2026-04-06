@@ -2,7 +2,7 @@ import { useState } from "react"
 import MegaMenu from "./MegaMenu"
 import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.jsx"
 import { Link } from "react-router-dom" 
-import logo from "../assets/logo.svg"
+import logo from "../assets/logo.png"
 import signin from "../assets/signin.svg"
 import LoginModal from "./LoginModal"
 
@@ -82,14 +82,14 @@ Request Demo
 </div>
 
 
-<button
+{/* <button
 className="dark-toggle"
 onClick={()=>setDark(!dark)}
 >
 
 {dark ? "☀️":"🌙"}
 
-</button>
+</button> */}
 
 
 <div
