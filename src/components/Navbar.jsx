@@ -2,7 +2,7 @@ import { useState } from "react"
 import MegaMenu from "./MegaMenu"
 import { solutionsMenuData, RestaurantMenuData } from "./data/nav-menu.jsx"
 import { Link } from "react-router-dom" 
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.svg"
 import signin from "../assets/signin.svg"
 import LoginModal from "./LoginModal"
 

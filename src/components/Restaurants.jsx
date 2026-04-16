@@ -18,29 +18,29 @@ TiffinCurry adapts to your workflow.
 
 <div className="restaurant-grid">
 
-<Link to="/fine-dining" className="restaurant-card fine">
+<Link to="/restaurants/fine-dining" className="restaurant-card fine">
 <h3>Fine Dining</h3>
 </Link>
 
 
-<Link to="/quick-service" className="restaurant-card qsr">
+<Link to="/restaurants/quick-service" className="restaurant-card qsr">
 <h3>Quick Service</h3>
 </Link>
 
-<Link to="/cafe" className="restaurant-card cafe">
+<Link to="/restaurants/cafe" className="restaurant-card cafe">
 <h3>Cafe</h3>
 </Link>
 
-<Link to="/bar" className="restaurant-card bar">
+<Link to="/restaurants/bar" className="restaurant-card bar">
 <h3>Bar</h3>
 </Link>
 
-<Link to="/food-truck" className="restaurant-card truck">
+<Link to="/restaurants/food-truck" className="restaurant-card truck">
 <h3>Food Truck</h3>
 </Link>
 
 
-<Link to="/cloud-kitchen" className="restaurant-card cloud">
+<Link to="/restaurants/cloud-kitchen" className="restaurant-card cloud">
 <h3>Cloud Kitchen</h3>
 </Link>
 
