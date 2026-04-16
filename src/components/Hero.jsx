@@ -1,5 +1,5 @@
 // import heroImage from "../assets/hero-bg.png";
-import heroImage from "../assets/hero_img_right.png";
+import heroImage from "../assets/hero_img_right.jpeg";
 import darkHeroImage from "../assets/hero-bg-dark.png";
 
 // import "./css/Hero.css";

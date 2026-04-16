@@ -3,7 +3,7 @@ import { useState } from "react";
 import hrm from "../assets/hrm.png";
 import pos from "../assets/lightning-fast-billing.png";
 import kot from "../assets/kot_screen.png";
-import clp from "../assets/customer_centricity.png";
+import clp from "../assets/customer_centricity.jpeg";
 import omg from "../assets/order_management.jpeg";
 import mmg from "../assets/menu_management.jpeg";
 import img from "../assets/inventory_management.jpeg";
