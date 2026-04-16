@@ -10,9 +10,9 @@
     d="M44 20 
        C36 20, 36 42, 44 42" 
     stroke="#fff" 
-    stroke-width="6" 
+    strokeWidth="6" 
     fill="none" 
-    stroke-linecap="round"
+    strokeLinecap="round"
   />
 
 </svg>
