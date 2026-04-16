@@ -574,6 +574,7 @@ color:#eee;
 
 margin-top:10px;
 width:fit-content;
+display: inline-block;
 
 }
 
@@ -615,13 +616,6 @@ display:none;
 }
 
 
-.primary-btn{
-
-display:none;
-
-}
-
-
 .dark-toggle{
 
 display:none;
@@ -647,6 +641,8 @@ gap:18px;
 padding:25px;
 
 background:white;
+
+z-index:10;
 
 }
 

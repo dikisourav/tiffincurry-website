@@ -76,10 +76,11 @@ Restaurants
 style={{ cursor: "pointer" }} />
 </div>
 
-
+<Link to="/tiffincurry-website/demo" style={{ textDecoration: "none" }}> 
 <div className="primary-btn">
-Request Demo
+Contact Us
 </div>
+</Link>
 
 
 {/* <button
@@ -186,15 +187,18 @@ onClick={()=>setMenuOpen(!menuOpen)}
 <a href="/pricing" className="mobile-link-main">
 Pricing
 </a>
-
+<a href="/about" className="mobile-link-main">
+About
+</a>
 <div className="mobile-link-main" onClick={() => setSigninOpen(true)}
 style={{ cursor: "pointer" }}>
 Sign in
 </div>
 
-<div className="primary-btn mobile-btn">
+{/* <div className="primary-btn mobile-btn">
 Request Demo
-</div>
+</div> */}
+
 <LoginModal
 open={signinOpen}
 setOpen={setSigninOpen}
