@@ -1,29 +1,19 @@
-import { Link } from "react-router-dom"
+﻿import { Link } from "react-router-dom";
 
-export default function CTA(){
+export default function CTA() {
+  return (
+    <section className="cta reveal reveal-stagger">
+      <div className="cta-shell">
+        <h2>
+          Make service feel <span className="cta-highlight-word">effortless</span>
+        </h2>
 
-return(
+        <p className="cta-support-line">Take your restaurant operations digital with TiffinCurry.</p>
 
-<section className="cta reveal reveal-stagger">
-
-<div className="container">
-
-<h2>
-
-Ready to modernize your restaurant?
-
-</h2>
-
-<Link to="/tiffincurry-website/demo">
-<button className="primary-btn mobile-btn large">
-Book a Demo
-</button>
-</Link>
-
-</div>
-
-</section>
-
-)
-
+        <Link to="/tiffincurry-website/demo" className="cta-primary-link">
+          Get started
+        </Link>
+      </div>
+    </section>
+  );
 }

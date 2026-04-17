@@ -16,7 +16,7 @@ useReveal()
 
 return(
 
-<div className={dark ? "dark":"light"}>
+<div className={dark ? "dark home-page-shell":"light home-page-shell"}>
 
 <Navbar dark={dark} setDark={setDark}/>
 

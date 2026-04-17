@@ -339,23 +339,23 @@ header:"Premium Dining",
 links:[
 {title:"Fine Dine",url:"/solutions/finedine"},
 {title:"Casual Dining",url:"/solutions/casual_dining"},
-{title:"Cafe",url:"/solutions/cafe"},
-{title:"Bar & Lounge",url:"/solutions/bar"}
+{title:"Cafe",url:"/tiffincurry-website/restaurants/cafe"},
+{title:"Bar & Lounge",url:"/tiffincurry-website/restaurants/bar-lounge"}
 ]
 },
 {
 header:"Quick-Service Formats",
 
 links:[
-{title:"Quick Service Restaurant",url:"/solutions/quick_service"},
-{title:"Fast Casual",url:"/solutions/fast_casual"},
+{title:"Quick Service Restaurant",url:"/tiffincurry-website/restaurants/quick-service"},
+{title:"Fast Casual",url:"/tiffincurry-website/restaurants/quick-service"},
 ]
 },
 {
 header:"Restaurant Chains",
 
 links:[
-{title:"Cafe Chains",url:"/solutions/cafe_chains"},
+{title:"Cafe Chains",url:"/tiffincurry-website/restaurants/cafe"},
 {title:"QSR Chains",url:"/solutions/qsr_chains"},
 {title:"Speciality Restaurant Chains",url:"/solutions/speciality_chains"},
 {title:"Dessert Chains",url:"/solutions/confectionery_chains"},
@@ -375,8 +375,8 @@ header:"Street & Express Formats",
 
 links:[
 {title:"Pizzeria",url:"/solutions/finedine"},
-{title:"Roll Corner",url:"/solutions/qsr"},
-{title:"Momo Shop",url:"/solutions/cafe"},
+{title:"Roll Corner",url:"/tiffincurry-website/restaurants/quick-service"},
+{title:"Momo Shop",url:"/tiffincurry-website/restaurants/cafe"},
 {title:"Kebab Shop",url:"/solutions/kebab_shop"},
 {title:"Burger Joint",url:"/solutions/burger_joint"},
 {title:"Sandwich Shop",url:"/solutions/sandwich_shop"},
@@ -400,9 +400,9 @@ links:[
 header:"Delivery-First Kitchens",
 
 links:[
-{title:"Cloud Kitchen",url:"/solutions/cloud"},
-{title:"Food Truck",url:"/solutions/food_truck"},
-{title:"Virtual Brand Kitchens",url:"/solutions/virtual_brand"},
+{title:"Cloud Kitchen",url:"/tiffincurry-website/restaurants/cloud-kitchen"},
+{title:"Food Truck",url:"/tiffincurry-website/restaurants/food-truck"},
+{title:"Virtual Brand Kitchens",url:"/tiffincurry-website/restaurants/cloud-kitchen"},
 ]
 },
 {
@@ -413,7 +413,7 @@ links:[
 {title:"Milk Bars",url:"/solutions/milk_bars"},
 {title:"Juice & Smoothie Bars",url:"/solutions/juice_bars"},
 {title:"Tea Stall",url:"/solutions/tea_stall"},
-{title:"Coffee Kiosks",url:"/solutions/coffee_kiosk"},
+{title:"Coffee Kiosks",url:"/tiffincurry-website/restaurants/cafe"},
 ]
 },
 {

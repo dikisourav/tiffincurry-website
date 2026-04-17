@@ -1,159 +1,134 @@
-import {
-  Zap,
-  ShieldCheck,
-  WifiOff,
-  MonitorSmartphone,
-  Globe,
-  IndianRupee,
-  // CreditCard,
-  History,
-  Users,
-  Headphones,
-  Utensils,
-  LayoutDashboard,
-  MousePointerClick,
+﻿import {
   BarChart3,
-  Globe2,
   DatabaseBackup,
-  MapPin
-} from "lucide-react"
+  Globe,
+  Headphones,
+  IndianRupee,
+  LayoutDashboard,
+  MapPin,
+  MonitorSmartphone,
+  MousePointerClick,
+  ShieldCheck,
+  Sparkles,
+  WifiOff,
+  Zap,
+} from "lucide-react";
 
-export default function Metrics(){
+const heroReasons = [
+  {
+    value: "Offline",
+    label: "billing continuity",
+    text: "Keep orders and billing moving even when internet quality drops during peak hours.",
+    icon: <WifiOff size={24} />,
+  },
+  {
+    value: "GST",
+    label: "ready receipts",
+    text: "Generate clean, compliant bills for Indian restaurant workflows without slowing the counter.",
+    icon: <IndianRupee size={24} />,
+  },
+  {
+    value: "24/7",
+    label: "support access",
+    text: "Get dependable help when your team needs confidence during real service windows.",
+    icon: <Headphones size={24} />,
+  },
+];
 
 const metrics = [
+  {
+    title: "Instant billing",
+    text: "Fast item search, quick payments, and fewer billing mistakes during rush hours.",
+    icon: <Zap size={22} />,
+  },
+  {
+    title: "Reliable local setup",
+    text: "Built to keep restaurant operations stable across counters, tables, and service stations.",
+    icon: <ShieldCheck size={22} />,
+  },
+  {
+    title: "Multi-terminal ready",
+    text: "Run main counters, bar stations, handhelds, and table-side devices in sync.",
+    icon: <MonitorSmartphone size={22} />,
+  },
+  {
+    title: "Regional language support",
+    text: "Help staff learn faster and operate comfortably in familiar languages.",
+    icon: <Globe size={22} />,
+  },
+  {
+    title: "Easy staff training",
+    text: "Simple screens reduce onboarding time for cashiers, captains, and managers.",
+    icon: <MousePointerClick size={22} />,
+  },
+  {
+    title: "Real-time owner reports",
+    text: "View sales, payments, item movement, and outlet performance without waiting.",
+    icon: <BarChart3 size={22} />,
+  },
+  {
+    title: "Manage from anywhere",
+    text: "Stay connected to performance, staff activity, and decisions through a strong dashboard.",
+    icon: <LayoutDashboard size={22} />,
+  },
+  {
+    title: "Affordable pricing",
+    text: "Practical plans for growing restaurants that need power without heavy overhead.",
+    icon: <IndianRupee size={22} />,
+  },
+  {
+    title: "Secure data backup",
+    text: "Protect restaurant data, bills, reports, and operational records with safer backups.",
+    icon: <DatabaseBackup size={22} />,
+  },
+  {
+    title: "Made for Indian restaurants",
+    text: "Designed around GST billing, local workflows, fast counters, dine-in service, and peak-hour pressure.",
+    icon: <MapPin size={22} />,
+  },
+];
 
-{
-title:"Instant Billing",
-text:"TiffinCurry makes billing smooth and effortless at even the busiest counters. Designed for real restaurant workflows, it helps staff generate bills quickly without confusion or delays.",
-icon:<Zap size={40}/>
-},
+export default function Metrics() {
+  return (
+    <section className="metrics reveal reveal-stagger">
+      <div className="metrics-container">
+        <div className="metrics-intro-card">
+          <div className="metrics-heading">
+            <div className="metrics-eyebrow">
+              <Sparkles size={16} />
+              Why restaurant owners choose TiffinCurry
+            </div>
 
-{
-title:"Offline Ready",
-text:"TiffinCurry continues to function even without an internet connection, ensuring uninterrupted billing and order management. Your restaurant can keep running smoothly, regardless of connectivity issues.",
-icon:<WifiOff size={40}/>
-},
+            <h2 className="metrics-title">A POS built for clarity, rush hours, and Indian restaurant reality.</h2>
 
-{
-title:"99.9% Uptime",
-text:"TiffinCurry is built for reliability, ensuring your billing system is always available when you need it. With 99.9% uptime, you can trust that your restaurant's operations will run smoothly without interruptions.",
-icon:<ShieldCheck size={40}/>
-},
+            <p className="metrics-subtitle">
+              Premium software should not only look good. It should make busy service calmer,
+              staff training easier, and owner decisions sharper every day.
+            </p>
+          </div>
 
-{
-title:"Multi-Terminal Ready",
-text:"TiffinCurry supports multiple billing terminals, allowing you to manage orders and payments from various points in your restaurant. Whether it's the main counter, a bar station, or a table-side device, TiffinCurry keeps everything synchronized for efficient service.",
-icon:<MonitorSmartphone size={40}/>
-},
+          <div className="metrics-hero-grid">
+            {heroReasons.map((reason) => (
+              <article className="metric-hero-card" key={reason.label}>
+                <div className="metric-hero-icon">{reason.icon}</div>
+                <strong>{reason.value}</strong>
+                <span>{reason.label}</span>
+                <p>{reason.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
 
-
-
-{
-title:"Regional Language Support",
-text:"TiffinCurry supports multiple regional languages, making it easier for your staff to navigate the system and serve customers in their preferred language. This feature enhances user experience and helps bridge communication gaps in diverse restaurant environments.",
-icon:<Globe size={40}/>
-},
-
-{
-title:"Easy for Staff & Customers",
-text:"TiffinCurry is designed with simplicity in mind. Its intuitive interface makes it easy for your staff to learn and use, while also providing a seamless experience for your customers. From order to bill generation, TiffinCurry ensures a smooth and efficient process for everyone involved.",
-icon:<MousePointerClick size={40}/>
-},
-
-{
-title:"Real-Time Reports Anywhere",
-text:"Access real-time sales and performance reports from anywhere, at any time. TiffinCurry allows you to monitor your restaurant's performance on the go, giving you the insights you need to make informed decisions and optimize your operations.",
-icon:<BarChart3 size={40}/>
-},
-
-{
-title:"Manage from Anywhere",
-text:"With TiffinCurry, you can manage your restaurant from anywhere. A strong MIS dashboard provides you with real-time insights and control over your operations, allowing you to make informed decisions and keep your restaurant running smoothly, no matter where you are. ",
-icon:<LayoutDashboard size={40}/>
-},
-// {
-// title:"Manage Your Restaurant",
-// text:"TiffinCurry is more than just a billing system. It offers comprehensive restaurant management features, including multi-channel order management, kitchen display, menu management, inventory tracking, staff management, guest management, and sales analytics. This all-in-one solution helps you run your restaurant more efficiently and make informed decisions.",
-// icon:<LayoutDashboard size={40}/>
-// },
-
-
-{
-title:"Affordable Pricing",
-text:"TiffinCurry comes in different pricing plans to suit various restaurant sizes and needs, making it an affordable choice for businesses of all scales. With TiffinCurry, you get everything you need, without breaking the bank.",
-icon:<IndianRupee size={40}/>
-},
-
-// {
-// title:"Advanced Audit Trail",
-// text:"Keep track of all billing activities with our advanced audit trail. Know exactly what happened and when, ensuring transparency and compliance.",
-// icon:<History size={40}/>
-// },
-
-// {
-// title:"Guest Queue Management",
-// text:"We start caring for your guests even before they enter your restaurant. Our system helps you keep track of waiting customers, estimated wait times, and seating arrangements, ensuring a smooth dining experience for your guests.",
-// icon:<Users size={40}/>
-// },
-
-{
-title:"24/7 Support",
-text:"Our dedicated support team is available around the clock to assist you with any issues or questions. With TiffinCurry, you're never alone in managing your restaurant's billing needs.",
-icon:<Headphones size={40}/>
-},
-
-{
-title:"Secure Data Backup",
-text:"TiffinCurry ensures your data is safe with secure backup solutions. Your billing information and restaurant data are protected against loss, giving you peace of mind.",
-icon:<DatabaseBackup size={40}/>
-},
-{
-title:"Built for Indian Restaurants",
-text:"TiffinCurry is designed specifically for the way Indian restaurants operate—from fast counter service and regional language support to GST-ready billing and peak-hour reliability. It adapts naturally to local workflows, helping you manage daily operations smoothly without changing your existing processes or slowing down your service.",
-icon:<MapPin size={40}/>
-},
-
-
-]
-
-return(
-
-<section className="metrics reveal reveal-stagger">
-
-<div className="metrics-container">
-
-<h2 className="metrics-title">
-Why Choose TiffinCurry
-</h2>
-
-<p className="metrics-subtitle">
-Powerful features designed for modern restaurants
-</p>
-
-<div className="metrics-grid">
-
-{metrics.map((m,i)=>(
-
-<div key={i} className="metric-item">
-
-<div className="metric-icon">
-{m.icon}
-</div>
-
-<h3>{m.title}</h3>
-
-<p>{m.text}</p>
-
-</div>
-
-))}
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+        <div className="metrics-grid">
+          {metrics.map((m) => (
+            <article key={m.title} className="metric-item">
+              <div className="metric-icon">{m.icon}</div>
+              <h3>{m.title}</h3>
+              <p>{m.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
