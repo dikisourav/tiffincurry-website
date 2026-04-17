@@ -5,42 +5,49 @@ const restaurantTypes = [
   {
     title: "Fine Dining",
     label: "Full service",
-    text: "Table service, reservations, KOT, billing and guest-first operations.",
+    text: "Manage tables, captain orders, kitchen, billing and guest history smoothly.",
     className: "fine",
     to: "/tiffincurry-website/restaurants/dine-in",
   },
   {
     title: "Quick Service",
     label: "Fast counters",
-    text: "Rush-hour billing, tokens, pickup orders and counter-to-kitchen sync.",
+    text: "Bill faster, manage tokens, reduce queues and serve more orders in rush hours.",
     className: "qsr",
     to: "/tiffincurry-website/restaurants/quick-service",
   },
   {
+    title: "Canteen",
+    label: "Office & school",
+    text: "Handle meal rush, coupons, prepaid orders and daily reports with ease.",
+    className: "canteen",
+    to: "/tiffincurry-website/restaurants/canteen",
+  },
+  {
     title: "Cafe",
     label: "Casual formats",
-    text: "Menu control, repeat customers, light bites, beverages and cozy service.",
+    text: "Handle repeat customers, combos, takeaway and menu changes easily.",
     className: "cafe",
     to: "/tiffincurry-website/restaurants/cafe",
   },
   {
     title: "Bar & Lounge",
     label: "Night service",
-    text: "Tabs, item control, captain orders, billing and high-value reporting.",
+    text: "Manage open tabs, split bills, offers, stock and closing reports.",
     className: "bar",
     to: "/tiffincurry-website/restaurants/bar-lounge",
   },
   {
     title: "Food Truck",
     label: "Mobile outlet",
-    text: "Compact billing, quick menu changes and service that moves with you.",
+    text: "Bill quickly, manage a small menu, accept UPI and track location-wise sales.",
     className: "truck",
     to: "/tiffincurry-website/restaurants/food-truck",
   },
   {
     title: "Cloud Kitchen",
     label: "Delivery first",
-    text: "Aggregator orders, kitchen routing, item availability and dispatch control.",
+    text: "Manage online orders, preparation, packing, dispatch and brand-wise reports.",
     className: "cloud",
     to: "/tiffincurry-website/restaurants/cloud-kitchen",
   },
@@ -52,14 +59,14 @@ export default function Restaurants() {
       <div className="container">
         <div className="restaurant-eyebrow">
           <Sparkles size={16} />
-          Built around real restaurant workflows
+          Made for Indian restaurant formats
         </div>
 
-        <h2 className="restaurant-title">One POS, tuned for every restaurant format</h2>
+        <h2 className="restaurant-title">Made for every type of restaurant</h2>
 
         <p className="restaurant-subtitle">
-          Whether you run dine-in service, a fast counter, a cafe, a bar, a food truck or a
-          delivery-first kitchen, TiffinCurry adapts to the way your team actually works.
+          Whether you run fine dining, QSR, canteen, cafe, bar, food truck or cloud kitchen,
+          TiffinCurry adjusts to your restaurant style.
         </p>
 
         <div className="restaurant-grid">

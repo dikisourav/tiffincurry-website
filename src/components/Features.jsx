@@ -1,5 +1,5 @@
 ﻿import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   ArrowRight,
   BadgeCheck,
@@ -32,7 +32,7 @@ const features = [
     text: "Punch orders, apply discounts, accept payments, and print receipts quickly during rush hours.",
     img: pos,
     icon: <ReceiptText size={19} />,
-    link: "/features/pos",
+    link: "/tiffincurry-website/features/pos",
     badgeLabel: "Billing module",
     badgeValue: "Fast checkout",
     proof: ["Quick item search", "GST-ready receipts", "Cash, UPI and card flow"],
@@ -43,7 +43,7 @@ const features = [
     text: "Track dine-in, takeaway, delivery, and repeat orders from one clear operational view.",
     img: omg,
     icon: <ClipboardCheck size={19} />,
-    link: "/features/order-management",
+    link: "/tiffincurry-website/features/order-management",
     badgeLabel: "Order module",
     badgeValue: "Live tracking",
     proof: ["Live order status", "Captain to kitchen sync", "Cleaner handoffs"],
@@ -54,7 +54,7 @@ const features = [
     text: "Reduce front-door confusion with a queue flow that keeps waiting guests informed and staff prepared.",
     img: qmg,
     icon: <Clock3 size={19} />,
-    link: "/features/queue-management",
+    link: "/tiffincurry-website/features/queue-management",
     badgeLabel: "Queue module",
     badgeValue: "Guest flow",
     proof: ["Waitlist visibility", "Better table planning", "Fewer missed guests"],
@@ -65,7 +65,7 @@ const features = [
     text: "Monitor discounts, voids, edits, staff actions, and sensitive changes with stronger accountability.",
     img: aat,
     icon: <ShieldCheck size={19} />,
-    link: "/features/audit-trail",
+    link: "/tiffincurry-website/features/audit-trail",
     badgeLabel: "Audit module",
     badgeValue: "Action history",
     proof: ["Action history", "Manager visibility", "Safer operations"],
@@ -76,7 +76,7 @@ const features = [
     text: "Route orders to the kitchen with clear preparation status, fewer calls, and better order accuracy.",
     img: kot,
     icon: <ChefHat size={19} />,
-    link: "/features/kot",
+    link: "/tiffincurry-website/features/kot",
     badgeLabel: "Kitchen module",
     badgeValue: "KOT display",
     proof: ["KOT routing", "Prep visibility", "Faster service"],
@@ -87,7 +87,7 @@ const features = [
     text: "Update items, prices, variants, combos, and availability without disrupting daily service.",
     img: mmg,
     icon: <BadgeCheck size={19} />,
-    link: "/features/menu-management",
+    link: "/tiffincurry-website/features/menu-management",
     badgeLabel: "Menu module",
     badgeValue: "Availability",
     proof: ["Variants and add-ons", "Availability control", "Outlet-ready menus"],
@@ -98,7 +98,7 @@ const features = [
     text: "Understand repeat customers, preferences, feedback, and engagement opportunities in one place.",
     img: clp,
     icon: <Users size={19} />,
-    link: "/features/crm",
+    link: "/tiffincurry-website/features/crm",
     badgeLabel: "CRM module",
     badgeValue: "Guest 360",
     proof: ["Customer history", "Repeat tracking", "Better engagement"],
@@ -109,7 +109,7 @@ const features = [
     text: "Track stock, suppliers, consumption, and item movement so your kitchen avoids surprises.",
     img,
     icon: <PackageCheck size={19} />,
-    link: "/features/inventory-management",
+    link: "/tiffincurry-website/features/inventory-management",
     badgeLabel: "Stock module",
     badgeValue: "Live inventory",
     proof: ["Live stock checks", "Waste visibility", "Supplier control"],
@@ -120,7 +120,7 @@ const features = [
     text: "Manage attendance, shifts, roles, and staff performance without adding operational friction.",
     img: hrm,
     icon: <Users size={19} />,
-    link: "/features/hrm",
+    link: "/tiffincurry-website/features/hrm",
     badgeLabel: "Staff module",
     badgeValue: "Team control",
     proof: ["Attendance tracking", "Role control", "Productivity reports"],
@@ -131,7 +131,7 @@ const features = [
     text: "See sales, payments, bestsellers, staff actions, and outlet performance in decision-ready reports.",
     img: rpa,
     icon: <BarChart3 size={19} />,
-    link: "/features/reports-analytics",
+    link: "/tiffincurry-website/features/reports-analytics",
     badgeLabel: "Reports module",
     badgeValue: "Owner insights",
     proof: ["Daily snapshots", "Item movement", "Outlet insights"],
@@ -139,23 +139,26 @@ const features = [
 ];
 
 export default function Features() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { search } = useLocation();
+  const requestedFeature = new URLSearchParams(search).get("feature");
+  const requestedIndex = features.findIndex((feature) => feature.link.endsWith(`/${requestedFeature}`));
+  const [activeIndex, setActiveIndex] = useState(requestedIndex >= 0 ? requestedIndex : 0);
   const activeFeature = features[activeIndex];
 
   return (
-    <section className="feature-tabs reveal reveal-stagger">
+    <section className="feature-tabs reveal reveal-stagger" id="features">
       <div className="feature-tabs-container">
         <div className="feature-tabs-heading">
           <div className="feature-tabs-eyebrow">
             <Sparkles size={16} />
-            Operations, billing and growth in one POS
+            Billing, customers, kitchen and reports in one platform
           </div>
 
-          <h2 className="feature-tabs-title">Best in class features for serious restaurant teams</h2>
+          <h2 className="feature-tabs-title">One platform to manage your entire restaurant</h2>
 
           <p className="feature-tabs-subtitle">
-            From front counter to kitchen, inventory, staff, CRM, and reports,
-            TiffinCurry gives owners a calmer way to run daily operations.
+            Sell more, serve faster, control stock and staff, and understand your
+            restaurant with simple daily reports.
           </p>
         </div>
 
@@ -215,3 +218,5 @@ export default function Features() {
     </section>
   );
 }
+
+

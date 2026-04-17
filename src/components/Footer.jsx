@@ -9,17 +9,23 @@ import {
 import { MapPin, ShieldCheck } from "lucide-react";
 import logo from "../assets/logo.png";
 
-const productLinks = [
-  "POS Billing",
-  "Kitchen Display",
-  "Menu Control",
-  "Inventory",
-  "Reports",
+const featureLinks = [
+  { label: "Fast Billing", to: "/tiffincurry-website/features/pos" },
+  { label: "Order Management", to: "/tiffincurry-website/features/order-management" },
+  { label: "Queue Management", to: "/tiffincurry-website/features/queue-management" },
+  { label: "Audit Trail", to: "/tiffincurry-website/features/audit-trail" },
+  { label: "Kitchen Display", to: "/tiffincurry-website/features/kot" },
+  { label: "Menu Control", to: "/tiffincurry-website/features/menu-management" },
+  { label: "Guest CRM", to: "/tiffincurry-website/features/crm" },
+  { label: "Inventory", to: "/tiffincurry-website/features/inventory-management" },
+  { label: "Staff Management", to: "/tiffincurry-website/features/hrm" },
+  { label: "Reports", to: "/tiffincurry-website/features/reports-analytics" },
 ];
 
 const restaurantLinks = [
   { label: "Fine Dining", to: "/tiffincurry-website/restaurants/dine-in" },
   { label: "Quick Service", to: "/tiffincurry-website/restaurants/quick-service" },
+  { label: "Canteen", to: "/tiffincurry-website/restaurants/canteen" },
   { label: "Cafe", to: "/tiffincurry-website/restaurants/cafe" },
   { label: "Bar & Lounge", to: "/tiffincurry-website/restaurants/bar-lounge" },
   { label: "Food Truck", to: "/tiffincurry-website/restaurants/food-truck" },
@@ -56,10 +62,12 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4>Product</h4>
+            <h4>Feature</h4>
             <ul>
-              {productLinks.map((item) => (
-                <li key={item}>{item}</li>
+              {featureLinks.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.to}>{item.label}</Link>
+                </li>
               ))}
             </ul>
           </div>

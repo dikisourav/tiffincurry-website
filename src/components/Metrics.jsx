@@ -2,7 +2,6 @@
   BarChart3,
   DatabaseBackup,
   Globe,
-  Headphones,
   IndianRupee,
   LayoutDashboard,
   MapPin,
@@ -10,81 +9,73 @@
   MousePointerClick,
   ShieldCheck,
   Sparkles,
-  WifiOff,
   Zap,
 } from "lucide-react";
 
-const heroReasons = [
+const confidenceGroups = [
   {
-    value: "Offline",
-    label: "billing continuity",
-    text: "Keep orders and billing moving even when internet quality drops during peak hours.",
-    icon: <WifiOff size={24} />,
+    label: "Growth",
+    title: "Bring customers back and sell more",
+    text: "Use billing history, faster service, and clear reports to understand what helps sales grow.",
+    items: [
+      {
+        title: "Repeat customers",
+        text: "Save customer details and use order history to bring people back with better offers.",
+        icon: <MousePointerClick size={20} />,
+      },
+      {
+        title: "Fast rush billing",
+        text: "Bill quickly, reduce waiting time, and keep service moving during busy hours.",
+        icon: <Zap size={20} />,
+      },
+      {
+        title: "Clear daily reports",
+        text: "Know sales, payments, best-selling items, and staff activity without guessing.",
+        icon: <BarChart3 size={20} />,
+      },
+      {
+        title: "Affordable pricing",
+        text: "Practical plans for growing restaurants that need power without heavy overhead.",
+        icon: <IndianRupee size={20} />,
+      },
+    ],
   },
   {
-    value: "GST",
-    label: "ready receipts",
-    text: "Generate clean, compliant bills for Indian restaurant workflows without slowing the counter.",
-    icon: <IndianRupee size={24} />,
-  },
-  {
-    value: "24/7",
-    label: "support access",
-    text: "Get dependable help when your team needs confidence during real service windows.",
-    icon: <Headphones size={24} />,
-  },
-];
-
-const metrics = [
-  {
-    title: "Instant billing",
-    text: "Fast item search, quick payments, and fewer billing mistakes during rush hours.",
-    icon: <Zap size={22} />,
-  },
-  {
-    title: "Reliable local setup",
-    text: "Built to keep restaurant operations stable across counters, tables, and service stations.",
-    icon: <ShieldCheck size={22} />,
-  },
-  {
-    title: "Multi-terminal ready",
-    text: "Run main counters, bar stations, handhelds, and table-side devices in sync.",
-    icon: <MonitorSmartphone size={22} />,
-  },
-  {
-    title: "Regional language support",
-    text: "Help staff learn faster and operate comfortably in familiar languages.",
-    icon: <Globe size={22} />,
-  },
-  {
-    title: "Easy staff training",
-    text: "Simple screens reduce onboarding time for cashiers, captains, and managers.",
-    icon: <MousePointerClick size={22} />,
-  },
-  {
-    title: "Real-time owner reports",
-    text: "View sales, payments, item movement, and outlet performance without waiting.",
-    icon: <BarChart3 size={22} />,
-  },
-  {
-    title: "Manage from anywhere",
-    text: "Stay connected to performance, staff activity, and decisions through a strong dashboard.",
-    icon: <LayoutDashboard size={22} />,
-  },
-  {
-    title: "Affordable pricing",
-    text: "Practical plans for growing restaurants that need power without heavy overhead.",
-    icon: <IndianRupee size={22} />,
-  },
-  {
-    title: "Secure data backup",
-    text: "Protect restaurant data, bills, reports, and operational records with safer backups.",
-    icon: <DatabaseBackup size={22} />,
-  },
-  {
-    title: "Made for Indian restaurants",
-    text: "Designed around GST billing, local workflows, fast counters, dine-in service, and peak-hour pressure.",
-    icon: <MapPin size={22} />,
+    label: "Control",
+    title: "Run daily operations with fewer blind spots",
+    text: "Keep staff, counters, data, outlets, and Indian restaurant workflows easier to manage.",
+    items: [
+      {
+        title: "Reliable local setup",
+        text: "Built to keep restaurant operations stable across counters, tables, and service stations.",
+        icon: <ShieldCheck size={20} />,
+      },
+      {
+        title: "Multi-terminal ready",
+        text: "Run main counters, bar stations, handhelds, and table-side devices in sync.",
+        icon: <MonitorSmartphone size={20} />,
+      },
+      {
+        title: "Regional language support",
+        text: "Help staff learn faster and operate comfortably in familiar languages.",
+        icon: <Globe size={20} />,
+      },
+      {
+        title: "Manage from anywhere",
+        text: "Stay connected to performance, staff activity, and decisions through a strong dashboard.",
+        icon: <LayoutDashboard size={20} />,
+      },
+      {
+        title: "Secure data backup",
+        text: "Protect restaurant data, bills, reports, and operational records with safer backups.",
+        icon: <DatabaseBackup size={20} />,
+      },
+      {
+        title: "Made for Indian restaurants",
+        text: "Designed around GST billing, local workflows, fast counters, and dine-in pressure.",
+        icon: <MapPin size={20} />,
+      },
+    ],
   },
 ];
 
@@ -92,39 +83,40 @@ export default function Metrics() {
   return (
     <section className="metrics reveal reveal-stagger">
       <div className="metrics-container">
-        <div className="metrics-intro-card">
-          <div className="metrics-heading">
-            <div className="metrics-eyebrow">
-              <Sparkles size={16} />
-              Why restaurant owners choose TiffinCurry
-            </div>
-
-            <h2 className="metrics-title">A POS built for clarity, rush hours, and Indian restaurant reality.</h2>
-
-            <p className="metrics-subtitle">
-              Premium software should not only look good. It should make busy service calmer,
-              staff training easier, and owner decisions sharper every day.
-            </p>
+        <div className="metrics-board-heading">
+          <div className="metrics-eyebrow">
+            <Sparkles size={16} />
+            Built for Indian restaurants that want to grow
           </div>
 
-          <div className="metrics-hero-grid">
-            {heroReasons.map((reason) => (
-              <article className="metric-hero-card" key={reason.label}>
-                <div className="metric-hero-icon">{reason.icon}</div>
-                <strong>{reason.value}</strong>
-                <span>{reason.label}</span>
-                <p>{reason.text}</p>
-              </article>
-            ))}
-          </div>
+          <h2 className="metrics-title">Grow your restaurant and stay in control.</h2>
+
+          <p className="metrics-subtitle">
+            TiffinCurry helps you increase sales, bring customers back, train staff
+            faster, and manage daily operations easily.
+          </p>
         </div>
 
-        <div className="metrics-grid">
-          {metrics.map((m) => (
-            <article key={m.title} className="metric-item">
-              <div className="metric-icon">{m.icon}</div>
-              <h3>{m.title}</h3>
-              <p>{m.text}</p>
+        <div className="metrics-confidence-board">
+          {confidenceGroups.map((group) => (
+            <article className="metrics-confidence-column" key={group.label}>
+              <div className="metrics-column-head">
+                <span>{group.label}</span>
+                <h3>{group.title}</h3>
+                <p>{group.text}</p>
+              </div>
+
+              <div className="metrics-confidence-list">
+                {group.items.map((item) => (
+                  <div className="metrics-confidence-row" key={item.title}>
+                    <div className="metrics-confidence-icon">{item.icon}</div>
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p>{item.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </article>
           ))}
         </div>

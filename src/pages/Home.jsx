@@ -7,6 +7,9 @@ import Restaurants from "../components/Restaurants"
 import CTA from "../components/CTA"
 import Footer from "../components/Footer"
 import Features from "../components/Features"
+import OwnerPriorities from "../components/OwnerPriorities"
+import GrowthTools from "../components/GrowthTools"
+import BeforeAfter from "../components/BeforeAfter"
 import useReveal from "../hooks/useReveal";
 
 export default function Home(){
@@ -22,11 +25,17 @@ return(
 
 <Hero dark={dark}/>
 
+<OwnerPriorities/>
+
+<GrowthTools/>
+
 <Restaurants/>
 
 <Features/>
 
 <Metrics/>
+
+<BeforeAfter/>
 
 <CTA/>
 <Footer/>

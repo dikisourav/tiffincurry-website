@@ -27,7 +27,7 @@ export default function Hero() {
     <section className="hero home-premium-hero reveal">
       <div className="home-hero-eyebrow">
         <BadgeCheck size={16} />
-        Restaurant POS built for Indian operations
+        Restaurant management platform built for Indian operations
       </div>
 
       <div className="hero-text home-hero-copy">
@@ -36,9 +36,9 @@ export default function Hero() {
         </h1>
 
         <p>
-          TiffinCurry brings billing, table service, menu control, kitchen
-          tickets, inventory, and reports into one fast POS platform for modern
-          restaurants.
+          TiffinCurry helps Indian restaurants get more orders, bring customers
+          back, speed up billing, manage kitchen orders, and see daily reports
+          from one simple restaurant management platform.
         </p>
 
         <div className="hero-buttons home-hero-actions">
@@ -46,11 +46,10 @@ export default function Hero() {
             <Link to="/tiffincurry-website/demo" className="home-hero-primary">
               Request Demo <ArrowRight size={18} />
             </Link>
-            <span className="cta-subtext">Free setup consultation included</span>
           </div>
 
-          <Link to="/tiffincurry-website/restaurants/dine-in" className="home-hero-secondary">
-            Explore dine-in POS
+          <Link to="/tiffincurry-website/growth" className="home-hero-secondary">
+            See how it helps growth
           </Link>
         </div>
 

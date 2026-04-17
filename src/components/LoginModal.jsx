@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import logo from "../assets/logo.svg"
 
@@ -31,23 +32,55 @@ document.documentElement.style.overflow = "auto";
 
 }, [open]);
 
+useEffect(() => {
+
+if (!open) return undefined;
+
+const handleEscape = (event) => {
+
+if (event.key === "Escape") {
+
+setOpen(false);
+
+}
+
+};
+
+window.addEventListener("keydown", handleEscape);
+
+return () => window.removeEventListener("keydown", handleEscape);
+
+}, [open, setOpen]);
+
 
 if (!open) return null;
 
-return (
+return createPortal(
 
-<div className="login-overlay">
+<div
+className="login-overlay"
+role="presentation"
+onMouseDown={() => setOpen(false)}
+>
 
-<div className="login-modal animate-fadeIn">
+<div
+className="login-modal animate-fadeIn"
+role="dialog"
+aria-modal="true"
+aria-labelledby="login-title"
+onMouseDown={(event) => event.stopPropagation()}
+>
 
 <button
+type="button"
 className="login-close"
 onClick={() => setOpen(false)}
+aria-label="Close sign in modal"
 >
 <X size={20} />
 </button>
 
-<h2 className="login-title">
+<h2 className="login-title" id="login-title">
 Sign in to TiffinCurry
 </h2>
 
@@ -107,5 +140,7 @@ alt="TiffinCurry logo"
 
 </div>
 
+,
+document.body
 );
 }

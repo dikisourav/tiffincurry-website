@@ -3,8 +3,11 @@ import Home from "./pages/Home"
 import Demo from "./pages/Demo"
 import Pricing from "./pages/Pricing"
 import About from "./pages/About"
+import Growth from "./pages/Growth"
+import FeatureDetail from "./pages/features/FeatureDetail"
 import DineInRestaurants from "./pages/restaurants/Restaurants"
 import QuickService from "./pages/restaurants/QuickService"
+import Canteen from "./pages/restaurants/Canteen"
 import Cafe from "./pages/restaurants/Cafe"
 import BarLounge from "./pages/restaurants/BarLounge"
 import FoodTruck from "./pages/restaurants/FoodTruck"
@@ -27,6 +30,12 @@ return(
 
         <Route path="/tiffincurry-website/about" element={<About/>} />
 
+        <Route path="/tiffincurry-website/growth" element={<Growth/>} />
+
+        <Route path="/tiffincurry-website/features/:slug" element={<FeatureDetail/>} />
+
+        <Route path="/features/:slug" element={<FeatureDetail/>} />
+
         <Route path="/tiffincurry-website/restaurants/dine-in" element={<DineInRestaurants/>} />
 
         <Route path="/tiffincurry-website/restaurants/fine-dining" element={<DineInRestaurants/>} />
@@ -40,6 +49,12 @@ return(
         <Route path="/solutions/quick_service" element={<QuickService/>} />
 
         <Route path="/solutions/qsr" element={<QuickService/>} />
+
+        <Route path="/tiffincurry-website/restaurants/canteen" element={<Canteen/>} />
+
+        <Route path="/restaurants/canteen" element={<Canteen/>} />
+
+        <Route path="/solutions/canteen" element={<Canteen/>} />
 
         <Route path="/tiffincurry-website/restaurants/cafe" element={<Cafe/>} />
 
